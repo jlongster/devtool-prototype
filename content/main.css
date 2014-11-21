@@ -1,0 +1,155 @@
+
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.body {
+    height: 100%;
+}
+
+ul {
+     margin: 0;
+}
+
+.toolbar {
+    height: 3em;
+}
+
+.toolbar button {
+    border: 0;
+    background: none;
+    background-color: red;
+}
+
+.devtools-toolbarbutton {
+    padding: 0;
+    height: 16px;
+    display: inline-block;
+    border: 1px solid green;
+}
+.devtools-toolbarbutton .image {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.devtools-toolbarbutton:not([checked]) .image {
+    opacity: .5;
+}
+
+#run .image {
+    background: url('chrome://browser/skin/devtools/debugger-pause.png');
+    opacity: 1;
+}
+
+#run.paused .image {
+    background: url('chrome://browser/skin/devtools/debugger-play.png');
+}
+
+#step-over .image {
+    background: url('chrome://browser/skin/devtools/debugger-step-over.png');
+}
+
+#step-in .image {
+    background: url('chrome://browser/skin/devtools/debugger-step-in.png');
+}
+
+#step-out .image {
+    background: url('chrome://browser/skin/devtools/debugger-step-out.png');
+}
+
+@media (min-resolution: 2dppx) {
+    #run .image {
+        background: url('chrome://browser/skin/devtools/debugger-pause@2x.png');
+        background-size: 200% 100%;
+    }
+
+    #run.paused .image {
+        background: url('chrome://browser/skin/devtools/debugger-play@2x.png');
+        background-size: 200% 100%;
+    }
+
+    #step-over .image {
+        background: url('chrome://browser/skin/devtools/debugger-step-over@2x.png');
+        background-size: 100%;
+    }
+
+    #step-in .image {
+        background: url('chrome://browser/skin/devtools/debugger-step-in@2x.png');
+        background-size: 100%;
+    }
+
+    #step-out .image {
+        background: url('chrome://browser/skin/devtools/debugger-step-out@2x.png');
+        background-size: 100%;
+    }
+}
+
+.widgets {
+    display: flex;
+    flex-direction: row;
+    height: calc(100% - 3em);
+}
+
+.widgets > div {
+}
+
+.resizable-container {
+    position: relative;
+}
+
+.resizer-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: calc(100% - 5px);
+    cursor: col-resize;
+    border-right: 1px solid rgba(118, 121, 125, .5);
+}
+
+.resizer-left {
+    position: absolute;
+    top: 0;
+    right: calc(100% - 5px);
+    bottom: 0;
+    left: -5px;
+    cursor: col-resize;
+}
+
+.sources {
+    flex: 0 300px;
+}
+
+.editor, .toolbar {
+    flex: 1 1 auto;
+}
+
+/* tabs */
+.devtools-sidebar-tabs > .tabs {
+    display: flex;
+    cursor: default;
+}
+
+.devtools-sidebar-tabs > .tabpanel {
+    overflow: auto;
+    height: 250px;
+}
+
+.devtools-sidebar-tabs > .tabs > .tab {
+    flex: 1 auto;
+    line-height: 24px;
+}
+

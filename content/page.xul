@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="chrome://browser/skin/devtools/common.css" type="text/css"?>
+<?xml-stylesheet href="chrome://react-debugger/content/toolbars.css" type="text/css"?>
+<?xml-stylesheet href="chrome://react-debugger/content/main.css" type="text/css"?>
+<!DOCTYPE window>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <body>
+    <!-- Use xul scripts because an xul document has bugs with html
+         script tags (it appears to load the script twice (bug 1098828)) -->
+    <xul:script type="application/javascript;version=1.8"
+                src="chrome://browser/content/devtools/theme-switching.js"/>
+    <xul:script src="lib/react.js"/>
+    <xul:script src="load.js"/>
+  </body>
+</html>

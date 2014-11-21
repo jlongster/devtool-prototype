@@ -1,0 +1,13 @@
+{
+  "title": "React Debugger",
+  "name": "react-debugger",
+  "version": "0.0.1",
+  "description": "A prototype debugger in React",
+  "main": "index.js",
+  "author": "James Long",
+  "engines": {
+    "firefox": ">=33.0a1",
+    "fennec": ">=33.0a1"
+  },
+  "license": "MIT"
+}
